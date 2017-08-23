@@ -1,0 +1,25 @@
+﻿@model MySQLConnectionDemo.Models.Tip
+@{
+    ViewBag.Title = "Kontakt";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/contact.css")" rel="stylesheet" />
+}
+
+<div id="divContact">
+    <h2>@ViewBag.Title</h2>
+    <h3>Kontakt informacii:</h3>
+
+    <address>
+        Finska 54A<br />
+        Skopje, MKD 1000<br />
+        <abbr title="Phone">Tel:</abbr>
+        00389 78 565 877
+    </address>
+    <br/>
+    <address>
+        <strong>Support:</strong>   <a href="">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="">Marketing@example.com</a>
+    </address>
+</div>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MySQLConnectionDemo.Models.Produkt>
+@{
+    ViewBag.Title = "Buy";
+}
+
+@section css{
+    <link href="@Url.Content("~/Content/buyView.css")" rel="stylesheet" />
+}
+
+<div id="glavnaSodzina">
+    <h2>Vi blagodarime na vaseto kupuvanje!</h2>
+    <p>Produkti koi gi kupivte:</p>
+    @foreach (var item in Model)
+    {
+        <p>@item.Ime - @item.Cena denari.</p>
+    }
+    <p>Od smetka Vi e odzemena suma od: @ViewBag.suma denari.</p><br>
+    <div id="linkPocetna">
+        @Html.ActionLink("Na Pocetna ->", "BelaTehnika", "Category", new { tipId = "1" },null)
+    </div>
+</div>
+
+

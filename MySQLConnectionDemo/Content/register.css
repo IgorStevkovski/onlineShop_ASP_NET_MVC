@@ -1,0 +1,44 @@
+﻿
+#registerForm{
+    width:54%;
+    float:left;
+    min-height:300px;
+    background-color:#fbe0ff;
+    margin-top:5px;
+    margin-left:5px;
+    border-radius:5px;
+}
+
+#registerForm h4{
+    text-align: center;
+    font-style:italic;
+}
+
+#registerForm h2{
+    text-align: center;
+}
+
+#divUsername{
+    margin-bottom:5px;/*za da se razdelat username i password input polinjata*/
+}
+#divPassword{
+    margin-bottom:5px;
+}
+#divPassword input{
+    margin-left:8px;
+}
+
+#registerForm span{
+    margin-left:5px;
+    font-size:120%;
+}
+
+input{
+    border-radius:2px;
+}
+
+#register{
+    margin-left:5px;
+    color:#631082;
+    padding: 5px;
+}

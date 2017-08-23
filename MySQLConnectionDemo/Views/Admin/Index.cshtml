@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/admin_index.css")" rel="stylesheet" />
+}
+
+<div id="celaSodrzina">
+    <h2>Administratorski del</h2>
+    <span>Za da izvrsis editiranje na proizvodite dostapni po kategorii klikni na nekoi od dolnite linkovi!</span>
+    <br/>
+    <p>Dodaj nov produkt:</p>
+    <div id="divAddProduct">
+        @Html.ActionLink("Add new product", "AddProduct", "Admin")<br>
+    </div>
+
+    <p>Edititiraj Produkti:</p>
+    <div id="divBelaTeh">
+        @Html.ActionLink("EDIT- Bela Tehnika Produkti", "Edit", "Admin", new { tipId = "1" }, null)
+    </div>
+    <br>
+    <div id="divNakit">
+        @Html.ActionLink("EDIT- Nakit Produkti", "Edit", "Admin", new { tipId = "3" }, null)
+    </div>
+    <br>
+    <div id="divObleka">
+        @Html.ActionLink("EDIT- Obleka Produkti", "Edit", "Admin", new { tipId = "4" }, null)
+    </div>
+    <br>
+</div>

@@ -1,0 +1,36 @@
+﻿@model MySQLConnectionDemo.Models.Produkt
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/admin_addProduct.css")" rel="stylesheet" />
+}
+
+<div id="divAddProduct">
+    <h2>Dodaj nov produkt</h2>
+    @using (Html.BeginForm("AddProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <p>Ime: @Html.TextBox("Ime")</p>
+        @*<p>Cena:@Html.TextBox("Cena", new { @type = "number", @min = "0" })</p>*@
+        <p>Cena: <input type="number" min="0" value="0" name="Cena" /></p>
+        <p>Kolicina: <input type="number" min="0" value="1" name="Kolicina" /></p>
+        <p>
+            Tip na produkt:
+            <select name="TipId">
+                <option value="1">Bela Tehnika</option>
+                <option value="2">Hrana</option>
+                <option value="3">Nakit</option>
+                <option value="4">Obleka</option>
+            </select>
+        </p>
+        <p>
+            Izberi slika: <input type="file" name="file" id="file" style="width: 100%" />
+        </p><br>
+        <input type="submit" value="Dodadi produkt" id="addProduct">
+    }
+    @*<form action="/Category/AddProduct" method="post">
+            Ime: <input type="text" name="ime"/><br>
+            <input type="submit" value="Sign In">
+        </form>*@
+</div>

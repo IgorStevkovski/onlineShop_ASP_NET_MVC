@@ -1,0 +1,57 @@
+﻿@model MySQLConnectionDemo.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/log_in.css")" rel="stylesheet" />
+}
+
+        <div id="loginForm">
+            <h2>@ViewBag.Title.</h2>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4>Use a local account to log in.</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+                <div id="divUsername">
+                    <span>
+                        @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </span>                  
+                </div>
+                <div id="divPassword">
+                    <span>
+                        @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </span>                  
+                </div>
+                <br/>
+                <div class="form-group">                   
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)                        
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Log in" id="logIn" />
+                </div>
+                              
+                <p>
+                    @Html.ActionLink("Register", "Register") if you don't have a local account.
+                </p>
+            }
+        </div>
+    
+    @*<div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

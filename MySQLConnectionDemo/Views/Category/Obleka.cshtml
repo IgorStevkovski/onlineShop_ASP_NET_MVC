@@ -1,0 +1,47 @@
+﻿@model MySQLConnectionDemo.Models.Produkti_NarProduktiVM
+@{
+    ViewBag.Title = "Obleka";
+}
+
+@section cssBelTehView {
+    <link href="@Url.Content("~/Content/belaTeh_obleka_nakit.css")" rel="stylesheet" />
+}
+
+<div id="produkti">
+    <h2>Obleka</h2>
+    @foreach (var item in Model.produkti)
+{
+    <div id="produkt">
+        <div>
+            <img src="~/Content/Images/@item.SlikaIme" width="130" height="130" />
+        </div>
+        <div id="produktInfo">
+            <span>@item.Ime</span><br>
+            <span>Cena: @item.Cena den.</span><br>
+            @Html.ActionLink("Dodaj vo kosnica", "DodajKosnica", "Category", new { productId = @item.ProduktId, categoryId = 4 }, null)
+        </div>
+   </div>
+}
+</div>
+<div id="kosnica">
+    <h3>Kupuvacka Kosnica</h3>
+    @if (Model.narProdukti.Count != 0)
+    {
+        double suma = 0;
+        foreach (var item2 in Model.narProdukti)
+        {
+            suma += @item2.Cena;
+            <span>@item2.Ime - @item2.Cena den. 
+                @Html.ActionLink("Brisi", "BrisiOdKosnica", "Category", new { tipId = @item2.TipId, brisiProduktId = @item2.ProduktId }, new { id = "linkBrisi" })
+            </span><br>
+        }
+        <p>Vkupna cena: @suma den.</p>
+        @Html.ActionLink("Kupi", "Buy", "Category",null, new { id="linkKupi"})
+    }
+    else
+    {
+        <h2>Nemate izbrano produkti</h2>
+    }
+</div>
+
+

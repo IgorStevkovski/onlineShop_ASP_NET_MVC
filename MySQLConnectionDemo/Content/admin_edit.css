@@ -1,0 +1,103 @@
+﻿body {
+    color:black;
+    font-size:100%;
+}
+
+#produkti{
+    background-color: #fbe0ff;
+    width: 54%;
+    border-radius: 5px;
+    float:left;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+#produkti h2{
+    text-align: center;
+}
+#produkt{
+    float:left;
+    width: 47%;
+    margin-left:5px;
+    border-style:solid;
+    border-width: 1px;
+    border-color:white;
+    margin-bottom: 3px;
+    min-height: 180px;
+}
+#produkt img{
+    float:left;
+}
+#produktInfo{
+    float:left;
+    margin-left:10px;
+    display:block;
+    width: 50%;
+    height:180px;
+}
+
+#divEdit a{
+    display:inline-block;
+    margin-top:0px;
+    text-decoration:none;
+    padding: 5px;
+    background-color:#ff6e35;/*orange*/
+    color:white;
+    border-radius: 5px;
+    text-align:center;
+}
+
+#divDelete a{
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+    padding: 5px;
+    background-color:#ff2b2b;/*crveno*/
+    color:white;
+    border-radius: 5px;
+    text-align:center;
+
+}
+
+#divLinkNazad{
+    width:100%;
+    text-align:center;
+    clear:both;
+}
+
+#divLinkNazad a{
+    display:inline-block;
+    margin-top:5px;
+    margin-bottom:5px;
+    text-decoration:none;
+    padding: 5px;
+    background-color:#545359;/*sivo*/
+    color:white;
+    border-radius: 5px;
+}
+
+#divLinkNazad a:hover{
+    background-color:#b2b2b0;/*svetlo sivo*/
+}
+
+#divDelete a:hover{
+    background-color:#ff7c7c;/*svetlo crveno*/
+}
+
+#divEdit a:hover{
+    background-color:#ffbe6b;/*svetlo orange*/
+}
+
+@media (max-width: 742px){
+    #produkti{
+        width:99%;
+    }
+}
+
+@media (max-width: 400px){
+    #produkti{
+        width:99%;
+    }
+    #produkt{
+        width:99%;
+    }
+}

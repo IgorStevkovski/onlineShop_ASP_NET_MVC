@@ -1,0 +1,129 @@
+﻿
+#produkti{
+    background-color: #fbe0ff;
+    width: 54%;
+    border-radius: 5px;
+    float:left;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+#produkti h2{
+    text-align: center;
+}
+#produkt{
+    float:left;
+    width: 47%;
+    margin-left:5px;
+    border-style:solid;
+    border-width: 1px;
+    border-color:white;
+    margin-bottom: 3px;
+    min-height: 180px;
+}
+#produkt img{
+    float:left;
+}
+#produktInfo{
+    float:left;
+    margin-left:10px;
+    display:block;
+    width: 50%;
+    height:150px;
+}
+
+#produktInfo a{
+    display:block;
+    margin-top:10px;
+    margin-bottom:5px;
+    text-decoration:none;
+    padding: 5px;
+    background-color:#631082;
+    color:white;
+    border-radius: 5px;
+    width:120px;/*mora fiksno*/
+}
+
+/*Za Kosnicata od desno*/
+#kosnica{
+    width: 24%;
+    float:left;
+    background-color:#fbe0ff;
+    margin-top: 5px;
+    margin-left: 3px;
+    border-radius:5px;
+    min-height:300px;
+}
+
+#kosnica h3{
+    text-align:center;
+    display:block;
+    padding:5px;
+    background-color:#631082;
+    color:white;
+    border-radius:5px;
+    margin-top:0px;/*posto po default ima h3 gorna i dolna margina*/
+}
+
+#kosnica span{
+    display:block;
+    margin-left:5px;
+    color:black;
+    font-size:115%;
+
+}
+#linkBrisi{
+    text-decoration:none;
+    padding:3px;
+    background-color:#ff694f;
+    color:black;
+    border-radius:3px;
+}
+
+#kosnica p{
+    display:block;
+    margin-left:5px;
+}
+
+#linkKupi{
+    margin-left:5px;
+    background-color:#631082;
+    color:white;
+    padding:3px;
+    text-decoration:none;
+    border-radius:3px;
+}
+
+@media (max-width: 742px){
+    #produkti{
+        width:59%;
+    }
+
+    #kosnica{
+        width:38%;
+    }
+}
+@media (max-width: 538px){
+    #produkti{
+        width:59%;
+    }
+    #produkt{
+        width:100%;
+    }
+    #kosnica{
+        width:38%;
+        height:100%;
+    }
+}
+
+@media (max-width: 380px){
+    #produkti{
+        width:100%;
+    }
+    #produkt{
+        width:100%;
+    }
+     #kosnica{
+        width:100%;
+        min-height:200px;
+    }
+}

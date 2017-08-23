@@ -1,0 +1,52 @@
+﻿body {
+}
+body {
+}
+
+#loginForm{
+    width:54%;
+    float:left;
+    min-height:300px;
+    background-color:#fbe0ff;
+    margin-top:5px;
+    margin-left:5px;
+    border-radius:5px;
+}
+
+#loginForm h4{
+    text-align: center;
+    font-style:italic;
+}
+
+#loginForm h2{
+    text-align: center;
+}
+
+#divUsername{
+    margin-bottom:5px;/*za da se razdelat username i password input polinjata*/
+}
+
+#divPassword input{
+    margin-left:8px;
+}
+
+#loginForm span{
+    margin-left:5px;
+    font-size:120%;
+}
+
+input{
+    border-radius:2px;
+}
+
+/*Ova e za remember me kopceto*/
+.form-group{
+    margin-left:5px;
+}
+
+/*Ova e za "log in" kopceto*/
+#logIn{
+    margin-left:5px;
+    color:#631082;
+    padding: 5px;
+}

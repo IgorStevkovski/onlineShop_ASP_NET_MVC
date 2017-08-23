@@ -1,0 +1,28 @@
+﻿body {
+}
+
+#divContact{
+    width:54%;
+    float:left;
+    min-height:300px;
+    background-color:#fbe0ff;
+    margin-top:5px;
+    margin-left:5px;
+    border-radius:5px;
+}
+
+#divContact h2,
+#divContact h3{
+    text-align:center;
+}
+
+address{
+    display:block;
+    margin-left: 10px;
+}
+
+@media (max-width: 742px){
+    #divContact{
+        width:99%;
+    }    
+}

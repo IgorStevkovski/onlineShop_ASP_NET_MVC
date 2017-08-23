@@ -1,0 +1,31 @@
+﻿body {
+}
+
+#divEditProduct{
+    width:54%;
+    float:left;
+    min-height:300px;
+    background-color:#fbe0ff;
+    margin-top:5px;
+    margin-left:5px;
+    border-radius:5px;
+}
+
+#divEditProduct h2{
+    text-align:center;
+}
+
+#divEditProduct p{
+    margin-left:5px;
+}
+
+#editProduct{
+    display:block;
+    margin-left:5px;
+    margin-bottom:15px;
+    padding:5px;
+    border-radius:5px;
+    background-color:#545359;
+    color:white;
+}
+

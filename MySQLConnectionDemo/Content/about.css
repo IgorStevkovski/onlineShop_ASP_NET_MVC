@@ -1,0 +1,24 @@
+﻿body {
+}
+
+#divAbout{
+    width:54%;
+    float:left;
+    min-height:300px;
+    background-color:#fbe0ff;
+    margin-top:5px;
+    margin-left:5px;
+    border-radius:5px;
+}
+
+#divAbout h2,
+#divAbout h3,
+#divAbout p{
+    text-align:center;
+}
+
+@media (max-width: 742px){
+    #divAbout{
+        width:99%;
+    }    
+}

@@ -1,0 +1,39 @@
+﻿@model MySQLConnectionDemo.Models.Produkt_NovProduktVM
+@{
+    ViewBag.Title = "EditProduct";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/admin_editProduct.css")" rel="stylesheet" />
+}
+
+<div id="divEditProduct">
+    
+    @using (Html.BeginForm("EditProduct", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <h2>Editiraj Produkt</h2>
+        <input type="hidden" name ="starProduktId" value="@Model.produkt.ProduktId"/>@*mora vaka da se prati id-to od produktot koj se editira posto formata vraka Produkt no ne go sozdava za da ima id*@
+        
+        <input type="hidden" name ="SlikaIme" value="@Model.produkt.SlikaIme"/>@*objektot Produkt koj se praka od formata zema vrednost za SlikaIme atributot od ova hidden pole *@
+        <p>Ime: @Html.TextBox("Ime", Model.produkt.Ime)</p>
+        <p>Cena: <input type="number" min="0" name="Cena" value= "@Model.produkt.Cena.ToString()"/></p>
+        <p>Kolicina: <input type="number" min="0" name="Kolicina" value= "@Model.produkt.Kolicina.ToString()"/></p>
+        <p>
+            Tip na produkt:
+            <select name="TipId">
+                <option value="1">Bela Tehnika</option>
+                <option value="2">Hrana</option>
+                <option value="3">Nakit</option>
+                <option value="4">Obleka</option>
+            </select>
+        </p>
+        <p>
+            Izberi slika: <input type="file" name="file" id="file" style="width: 100%" value="@Model.produkt.SlikaIme">
+        </p><br>
+        <input type="submit" value="Editiraj produkt" id="editProduct">
+    }
+    @*<form action="/Category/AddProduct" method="post">
+            Ime: <input type="text" name="ime"/><br>
+            <input type="submit" value="Sign In">
+        </form>*@
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MySQLConnectionDemo.Models.Produkt>
+@{
+    ViewBag.Title = "Edit Bela Tehnika";
+}
+
+@section css {
+    <link href="@Url.Content("~/Content/admin_edit.css")" rel="stylesheet" />
+}
+
+<div id="produkti">
+    <h2>Edit @ViewBag.ime</h2>
+    @foreach (var item in Model)
+    {
+        <div id="produkt">
+            <div>
+                <img src="~/Content/Images/@item.SlikaIme" width="130" height="130" />
+            </div>
+            <div id="produktInfo">
+                <span>@item.Ime</span><br/>
+                <span>Cena: @item.Cena Kolicina: @item.Kolicina</span><br/><br>
+                <div id="divEdit">
+                    @Html.ActionLink("Edit", "EditProduct", "Admin", new { produktId = item.ProduktId }, null)
+                </div>
+                <div id="divDelete">
+                    @Html.ActionLink("Delete", "DeleteProduct", "Admin", new { produktId = item.ProduktId }, null)
+                </div>
+            </div>
+        </div>
+    }
+    <div id="divLinkNazad">
+        @Html.ActionLink("Nazad", "Index", "Admin", null, null)
+    </div>
+</div>

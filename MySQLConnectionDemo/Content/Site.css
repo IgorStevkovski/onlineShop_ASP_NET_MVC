@@ -1,0 +1,216 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 40px;display:inline;
+    color:black;/*Se sto e vo Site.css e glavno, toa vo bootstrap.cs samo ako se povika, plus posledno se loada Site.css*/
+    background-image: url("Images/slika_pozadina.jpg");
+    background-repeat: repeat;
+    font-size:100%;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    /*min-width: 480px;*/
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*DODADENO*/
+
+/*za da e centrirana slikata na Bootstrap Carousel-ot t.e na slideshow-ot*/
+.carousel-inner > .item > img {
+    margin: 0 auto;  
+}
+
+/*Za najgornoto- osnovnoto meni*/
+#divMeni{
+    width:100%;
+    background-color:#631082;/*Lila boja*/
+    height:50px;
+    margin-top:-34px;/*Ova posto difoltno menito e oddeleno od gorniot pocetok na browserot za 34 px i ima prazen bel prostor*/
+}
+
+#divMeni ul{
+    list-style:none;
+}
+
+#listaLevo li a:link,
+#listaLevo li a:visited{
+    text-decoration:none;
+    display: inline-block;
+    padding: 15px 15px;
+    border-radius: 5px;
+    float: left;
+    color: white;    
+}
+
+#listaLevo li a:hover,
+#listaLevo li a:active{
+    background-color:#b198ba;
+}
+
+#listaDesno{
+    padding-right: 30px;/*za da ne e prilepena listata na desniot kraj na browserot, a so toa i najdesniot element od nea*/
+}
+
+#listaDesno li a:link,
+#listaDesno li a:visited{
+    text-decoration:none;
+    display: inline-block;
+    padding: 15px 15px;
+    border-radius: 5px;
+    float: right;
+    color: white;
+}
+
+#listaDesno li a:hover,
+#listaDesno li a:active{
+    background-color:#b198ba;
+}
+
+/*Listata od glavnoto Meni - od levo*/
+#listaMeniLevo{
+    width: 23%;
+    margin-left:-35px;/*za da e prilepena do leviot kraj na browserot*/
+    float: left;
+}
+
+#listaMeniLevo ul{
+    list-style:none;
+    margin-top: 5px;
+}
+
+#listaMeniLevo ul a:link,
+#listaMeniLevo ul a:visited{
+    display:block;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    background-color: #631082;
+    border-radius:5px;
+    color:white;
+    margin-bottom: 2px;
+}
+
+#listaMeniLevo ul a:hover,
+#listaMeniLevo ul a:active{
+    background-color: #b198ba;
+}
+
+#divFooter{
+    clear:both;
+    width:100%;
+}
+#divFooter footer p{
+    display:block;
+    text-align:center;
+
+}
+
+/*select {
+    display: none;
+}*/
+#listaMeniLevo select{
+    display:none;
+}
+
+/*
+#divMeni ul li a:link,
+#divMeni ul li a:visited{
+    text-decoration:none;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    float: left;
+    color: white;    
+}
+
+#divMeni ul li a:hover,
+#divMeni ul li a:active{
+    background-color:#b198ba;
+}
+*/
+@media (max-width: 742px){
+    #listaMeniLevo{
+        width: 100%;
+    }
+
+    #listaMeniLevo ul{
+         display:none;
+    }
+
+    #listaMeniLevo select {
+        display: block;
+        margin-left:35px;
+        width:100%;
+        max-width:100%;
+        border-radius:3px;
+        padding:2px;
+        color:#631082;
+        font-size:110%;
+        border: 2px solid #631082;
+    }
+}
+
+@media (max-width: 600px){
+    
+    #listaDesno li #manageLink{
+        display:none;
+    }
+
+    #divMeni{
+        font-size:90%;
+    }
+    
+     #listaLevo {
+         padding-left:5px;
+     }
+
+     #listaLevo li a:link,
+     #listaLevo li a:visited{
+        padding: 15px 5px;    
+    }
+
+    #listaDesno{
+        padding-right:5px;
+    }
+
+    #listaDesno li a:link,
+    #listaDesno li a:visited {
+        padding: 15px 5px;
+    }
+
+    
+     
+}
